@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css\styles.css" />
+    <script src="index.js" defer></script>
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body class="container">
+    <article class="intro" data-active="false">
+      <h1 class="fs-900">ROCK. PAPER. SCISSORS.</h1>
+      <button>Let's Play</button>
+    </article>
+    <article class="game l-game flow" data-active="true">
+      <div class="l-game__board">
+        <div class="card flow">
+          <div class="card__header">
+            <img
+              id="player-weapon-img"
+              class="card__image"
+              src="images/paper.png"
+              alt="paper"
+            />
+          </div>
+          <div class="card__body text-center">
+            <div class="card__player">
+              <h2>Player 1</h2>
+            </div>
+            <div class="card__feedback">
+              <p class="js-player-feedback">Wins</p>
+            </div>
+          </div>
+        </div>
+        <div class="card flow">
+          <div class="card__header">
+            <img
+              id="computer-weapon-img"
+              class="card__image"
+              src="images/paper.png"
+              alt="paper"
+            />
+          </div>
+          <div class="card__body text-center">
+            <div class="card__player">
+              <h2>Computer</h2>
+            </div>
+            <div class="card__feedback">
+              <p class="js-computer-feedback">Wins</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="score-card flex">
+        <p>
+          <span id="playerScore">0</span> -
+          <span id="computerScore">0</span>
+        </p>
+      </div>
+      <div class="gameFeedback" data-gameover="false">
+        <div class="game__weapons js-weapon-choices">
+          <button data-option="rock">Rock</button>
+          <button data-option="paper">Paper</button>
+          <button data-option="scissors">Scissors</button>
+        </div>
+        <div class="gameover-screen">
+          <h2 class="gameover-screen__feedback">You Win</h2>
+          <button id="reset">Play Again</button>
+        </div>
+      </div>
+    </article>
+    <article class="gameover" data-active="false">
+      <h2><strong>Gameover</strong></h2>
+      <button>Play again</button>
+    </article>
+  </body>
+</html>
